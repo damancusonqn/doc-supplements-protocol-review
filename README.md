@@ -122,6 +122,8 @@ Each supplement entry should follow this format:
 2. **Review Interface**: Doctor sets Action (Continue/Discontinue/Modify), Timing, and Priority (1-5) for each item
 3. **Generate Report**: Creates a formatted summary with all decisions
 4. **Export**: Print to PDF or copy to clipboard
+  
+   ⚠️ **Important:** The doctor's inputs exist only in browser memory. **Refreshing the page or closing the tab will permanently lose all doctor's decisions.** Make sure to copy the report to clipboard or export to PDF before leaving the doctor's appointment!
 
 ## 🔒 Privacy & Security
 
