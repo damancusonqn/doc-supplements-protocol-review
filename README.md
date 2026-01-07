@@ -2,6 +2,20 @@
 
 A single-file, offline HTML tool designed to optimize 10-minute doctor appointments. Hand your tablet to your doctor, review your supplement protocol, get "Green Light / Red Light" decisions, and generate a summary report—all without an internet connection.
 
+## 📑 Table of Contents
+
+- [🎯 What This Is](#-what-this-is)
+- [📖 The Story](#-the-story)
+- [🚀 Quick Start](#-quick-start)
+- [📝 Editing Your Data](#-editing-your-data)
+  - [Data Structure](#data-structure)
+- [💻 How It Works](#-how-it-works)
+- [🔒 Privacy & Security](#-privacy--security)
+- [📄 License](#-license)
+- [🛠️ Technical Details](#-technical-details)
+- [🤝 Contributing](#-contributing)
+- [⚠️ Disclaimer](#️-disclaimer)
+
 ## 🎯 What This Is
 
 This is a **local-first**, **zero-dependency** web application that runs entirely in your browser. No servers, no databases, no tracking. Your data exists only in RAM and disappears when you refresh the page. Built as a "quick hack" to solve a personal pain point—efficiency in GP appointment slots.
@@ -138,6 +152,5 @@ This tool is for informational purposes only. It does not provide medical advice
 
 ---
 
-**Built by:** Senior Hardware/Embedded Engineer (~20 years exp), Ex-MedTech (glucose monitoring), Deep knowledge of Medical Device Regulations (MDR).  
-**Tone:** Engineer-to-engineer, authentic, slightly humorous.  
+**Built by:** Senior Hardware/Embedded Engineer (~20 years exp), Ex-MedTech (glucose monitoring), a few encounters with the "painful bureocracy" of Medical Device Regulations (MDR) / Certification process.  
 **Philosophy:** Solve the problem, ship the solution, move on.
