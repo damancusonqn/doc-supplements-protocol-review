@@ -43,9 +43,8 @@ https://www.linkedin.com/posts/damancuso_notasaas-sideproject-opensource-activit
 //     dose: "1000mg",              // Dosage information
 //     category: "Category",        // Optional: e.g., "Performance", "Sleep/Collagen", "Heart/Brain"
 //     note: "Your note here",     // Your question or note for the doctor
-//     status: 'Continue',          // For 'current': 'Continue', 'Modify', or 'Discontinue'
-//                                  // For 'considered': use null
-//     time: 'Morning'              // 'Morning', 'Afternoon', or 'Night'
+//     status: null,                // Leave as null - doctor will set this (Continue/Modify/Discontinue for current, YES/NO/Later for considered)
+//     time: 'AM'                   // 'AM', 'PM', or 'Night'
 // }
 //
 // ============================================
@@ -57,27 +56,17 @@ const MY_DATA = {
     
     // Current supplements you're taking
     current: [
-        { id: 'c5', name: "Creatine Monohydrate", dose: "4000mg", category: "Performance", note: "I feel better with 4g, less water retention", status: 'Continue', time: 'Morning' },
-        { id: 'c6', name: "MCT:C8 Oil", dose: "15ml", category: "Keto/Energy", note: "Now is OK with my stomack! ", status: 'Continue', time: 'Morning' },
-        { id: 'c1', name: "Vitamin D3 + K2-MK7", dose: "10,000 IU + 200mcg", category: "Bone/Immune", note: "Dose too high?", status: 'Continue', time: 'Morning' },
-        { id: 'c2', name: "Glycine", dose: "10g", category: "Sleep/Collagen", note: "Powder form; for sleep quality.", status: 'Continue', time: 'Night' },
-        { id: 'c3', name: "Vitamin C", dose: "1000mg", category: "Antioxidant", note: "is dosis ok?", status: 'Modify', time: 'Morning' },
-        { id: 'c4', name: "B-Complex (Methylated)", dose: "1 Cap", category: "Energy/Nerves", note: "Full spectrum B1-B12.", status: 'Continue', time: 'Morning' },
-        { id: 'c7', name: "Magnesium Glycinate", dose: "1500mg (300mg elem.)", category: "Sleep/Muscles", note: "Highly bioavailable; no laxative effect.", status: 'Continue', time: 'Night' },
-        { id: 'c8', name: "L-Theanine", dose: "200mg", category: "Focus/Calm", note: "Take with coffee to reduce jitters.", status: 'Continue', time: 'Morning' },
-        { id: 'c9', name: "Ashwagandha KSM-66", dose: "600mg", category: "Stress", note: "30mg Withanolides. Helps with anxiety.", status: 'Modify', time: 'Night' },
-        { id: 'c10', name: "Probiotics (Multi-Strain)", dose: "50 Billion CFU", category: "Gut Health", note: "Useful for keto or a 'scam'?", status: 'Modify', time: 'Morning' },
-        { id: 'c11', name: "Omega-3 (EPA/DHA)", dose: "2000mg", category: "Heart/Brain", note: "High strength IFOS certified.", status: 'Continue', time: 'Afternoon' },
-        { id: 'c12', name: "Coenzyme Q10 (Ubiquinol)", dose: "100mg", category: "Heart/Mito", note: "Essential for mitochondrial energy.", status: 'Continue', time: 'Morning' },
-        { id: 'c13', name: "N-Acetyl-L-Cysteine (NAC)", dose: "800mg", category: "Detox/Lung", note: "Glutathione precursor.", status: 'Continue', time: 'Afternoon' }
+        { id: 'c1', name: "Magnesium Glycinate", dose: "1500mg (300mg elem.)", category: "Sleep/Muscles", note: "Highly bioavailable; no laxative effect.", status: null, time: 'Night' },
+        { id: 'c2', name: "Creatine Monohydrate", dose: "4000mg", category: "Performance", note: "I feel better with 4g, less water retention", status: null, time: 'AM' },
+        { id: 'c4', name: "Vitamin C", dose: "1000mg", category: "Antioxidant", note: "is dosis ok?", status: null, time: 'AM' },
+        { id: 'c5', name: "Omega-3 (EPA/DHA)", dose: "2000mg", category: "Heart/Brain", note: "High strength IFOS certified.", status: null, time: 'PM' },
     ],
     
     // Supplements you're considering adding
     considered: [
-        { id: 'q1', name: "Methylene Blue", dose: "0.5mg/kg", category: "Nootropic", note: "Never tried. Mitochondrial support?", status: null, time: 'Morning' },
-        { id: 'q2', name: "Keto BHB Salts", dose: "10g", category: "Keto/Fuel", note: "For transition or deep ketosis?", status: null, time: 'Afternoon' },
-        { id: 'q3', name: "Zinc + Selenium", dose: "15mg / 200mcg", category: "Immune/Thyroid", note: "Should I add for hormonal support?", status: null, time: 'Night' },
-        { id: 'q4', name: "Electrolytes (K/Na/Mg)", dose: "Varies", category: "Keto/Hydration", note: "Essential to prevent 'Keto Flu'.", status: null, time: 'Morning' }
+        { id: 'q2', name: "Keto BHB Salts", dose: "10g", category: "Keto/Fuel", note: "For transition or deep ketosis?", status: null, time: null },
+        { id: 'q3', name: "Zinc + Selenium", dose: "15mg / 200mcg", category: "Immune/Thyroid", note: "Should I add for hormonal support?", status: null, time: null },
+        { id: 'q4', name: "Electrolytes (K/Na/Mg)", dose: "Varies", category: "Keto/Hydration", note: "Essential to prevent 'Keto Flu'??", status: null, time: null }
     ]
 };
 
@@ -195,7 +184,7 @@ const MY_DATA = {
             <span class="label-text">Suggestion A</span>
             <input type="text" id="new-name-1" placeholder="Supplement name (e.g. Zinc)">
             <input type="text" id="new-dose-1" placeholder="Dose (e.g. 11 mg)">
-            <input type="text" id="new-note-1" placeholder="Dr. Instructions (e.g. 'Morning, only 2 weeks!')">
+            <input type="text" id="new-note-1" placeholder="Dr. Instructions (e.g. 'AM, only 2 weeks!')">
         </div>
         <div class="card suggestion">
             <span class="label-text">Suggestion B</span>

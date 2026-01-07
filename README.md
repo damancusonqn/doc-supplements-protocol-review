@@ -1,6 +1,6 @@
 # Doctor Visit Supplements Review Tool
 
-A single-file, offline HTML tool designed to optimize 10-minute doctor appointments. Hand your tablet to your doctor, review your supplement protocol, get "Green Light / Red Light" decisions, and generate a summary report—all without an internet connection.
+A single-file, offline HTML tool designed to optimize 5-10 minute doctor appointments. Hand your tablet to your doctor, review your supplement protocol, get "Green Light / Red Light" decisions, and generate a summary report—all without an internet connection.
 
 ## 📑 Table of Contents
 
@@ -18,9 +18,10 @@ A single-file, offline HTML tool designed to optimize 10-minute doctor appointme
 
 ## 🎯 What This Is
 
-This is a **local-first**, **zero-dependency** web application that runs entirely in your browser. No servers, no databases, no tracking. Your data exists only in RAM and disappears when you refresh the page. Built as a "quick hack" to solve a personal pain point—efficiency in GP appointment slots.
+This is a **local-first**, **zero-dependency** web application that runs entirely in your browser. No servers, no databases, no tracking. The report data -doctor's answers- exists only in RAM and disappears when you refresh the page. Your input data -supplements protocol, notes and questions for your doctor- lives on your version of the edited HTML file.
+Built as a "quick hack" to solve a personal pain point—efficiency in GP appointment slots.
 
-**Author's Note:** This isn't a SaaS. It's not a startup. It's a tool that works, built by someone who got tired of wasting precious appointment time explaining supplement stacks. If it helps you too, great. If not, fork it and make it better.
+**Author's Note:**  This is a simple tool that just works, built by someone who got tired of wasting precious appointment time explaining supplement stacks. If it helps you too, great. If not, fork it and make it better.
 
 ## 📖 The Story
 
@@ -41,13 +42,12 @@ So I bullied Gemini until we had this: A local, offline, "quick and dirty" HTML 
 **"Why don't you make this a SaaS/Startup?"** My wild guess for micro-projects like this:
 - 98% end up in the "forgotten side projects bin."
 - 1% buy a domain, try a few days to make a quick SaaS money machine, and forget about it when the next shiny thing appears.
-- 1% go full steam, raise a seed round, waste months of effort and hit a wall like "Medical Industry Certifications".
+- 1% go full steam, raise a seed round, waste months of effort and hit a wall like "Medical Industry Certifications" nightmare.
 
 I spent a few years designing hardware for an innovative non-invasive glucose monitoring device. Solving the technical challenges was super fun! but then, I saw the face of Medical Device Regulations. For "Class II" devices, you need industry-specific Quality Management Systems, certified Technical Documentation… essential for safety, but a bureaucratic nightmare for an engineer who likes to move fast. The fun ends very soon. 😅
 
 So, because I want to avoid over-filling my "forgotten side-projects bucket," I'm sharing the project here. It might save you a few hours of prompt-engineering.
 
-**PS:** I'm so intrigued—how will my doctor react to being handed a tablet with a custom UI? Will they be happy about the efficiency, or annoyed by the unusual protocol?
 
 ## 🚀 Quick Start
 
@@ -102,8 +102,8 @@ Each supplement entry should follow this format:
     dose: "10,000 IU + 200mcg",  // Dosage
     category: "Bone/Immune",      // Category tag
     note: "Dose too high?",       // Your note/question for the doctor
-    status: 'Continue',           // Initial status (or null for "considered")
-    time: 'Morning'               // Timing: 'Morning', 'Afternoon', or 'Night'
+    status: null,                 // Leave as null - doctor will set this during review
+    time: 'AM'                    // Timing: 'AM', 'PM', or 'Night'
 }
 ```
 
@@ -113,8 +113,8 @@ Each supplement entry should follow this format:
 - `dose`: Dosage information
 - `category`: Optional category tag (e.g., "Performance", "Sleep/Collagen", "Heart/Brain")
 - `note`: Your question or note for the doctor
-- `status`: For `current` items, use `'Continue'`, `'Modify'`, or `'Discontinue'`. For `considered` items, use `null`.
-- `time`: `'Morning'`, `'Afternoon'`, or `'Night'`
+- `status`: **Always set to `null`** - the doctor will set this during the review (Continue/Modify/Discontinue for current items, YES/NO/Later for considered items)
+- `time`: `'AM'`, `'PM'`, or `'Night'`
 
 ## 💻 How It Works
 
@@ -126,7 +126,7 @@ Each supplement entry should follow this format:
 ## 🔒 Privacy & Security
 
 - **100% Offline**: No network requests, no external resources
-- **No Data Storage**: Data exists only in browser RAM
+- **No Data Storage**: Data exists only in browser RAM -sandboxed-
 - **No Tracking**: Zero analytics, zero telemetry
 - **Local Only**: Open the file, use it, close it. That's it.
 
