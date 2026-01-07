@@ -2,6 +2,18 @@
 
 A single-file, offline HTML tool designed to optimize 5-10 minute doctor appointments. Hand your tablet to your doctor, review your supplement protocol, get "Green Light / Red Light" decisions, and generate a summary report—all without an internet connection.
 
+### Workflow
+
+```mermaid
+flowchart LR
+    A["📝 Patient<br/>Pre-fills Protocol"] --> B["👨‍⚕️ Doctor<br/>Review & Fill"]
+    B --> C["📄 Generate<br/>Report"]
+    
+    style A fill:#e8f4fd,stroke:#2196F3,stroke-width:2px
+    style B fill:#fff3e0,stroke:#ff9800,stroke-width:2px
+    style C fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
+```
+
 ## 📑 Table of Contents
 
 - [🎯 What This Is](#-what-this-is)
@@ -119,7 +131,7 @@ Each supplement entry should follow this format:
 ## 💻 How It Works
 
 1. **Tablet Mode / Desktop Mode**: Toggle between optimized layouts for different screen sizes
-2. **Review Interface**: Doctor sets Action (Continue/Discontinue/Modify), Timing, and Priority (1-5) for each item
+2. **Review Interface**: Doctor sets Action (Continue/Discontinue/Modify), Timing, and Priority (1-5) for each item, and can add any other suggestions they might have
 3. **Generate Report**: Creates a formatted summary with all decisions
 4. **Export**: Print to PDF or copy to clipboard
   
