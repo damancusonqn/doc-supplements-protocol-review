@@ -4,19 +4,11 @@ A single-file, offline HTML tool designed to optimize 5-10 minute doctor appoint
 
 ### Workflow
 
-```mermaid
-flowchart LR
-    A["📝 Patient<br/>Pre-fills Protocol"] --> B["👨‍⚕️ Doctor<br/>Review & Fill"]
-    B --> C["📄 Generate<br/>Report"]
-    
-    style A fill:#e8f4fd,stroke:#2196F3,stroke-width:2px
-    style B fill:#fff3e0,stroke:#ff9800,stroke-width:2px
-    style C fill:#e8f5e9,stroke:#4caf50,stroke-width:2px
-```
-
+![Patient Protocol Flow](docs/workflow-diagram.jpg)
 ## 📑 Table of Contents
 
 - [🎯 What This Is](#-what-this-is)
+- [📸 Screenshots](#-screenshots)
 - [📖 The Story](#-the-story)
 - [🚀 Quick Start](#-quick-start)
 - [📝 Editing Your Data](#-editing-your-data)
@@ -35,6 +27,35 @@ Built as a "quick hack" to solve a personal pain point—efficiency in GP appoin
 
 **Author's Note:**  This is a simple tool that just works, built by someone who got tired of wasting precious appointment time explaining supplement stacks. If it helps you too, great. If not, fork it and make it better.
 
+## 📸 Screenshots
+
+<details>
+<summary>Click to view screenshots of the application</summary>
+
+### Desktop Mode
+
+**Current Protocol Section**
+![Desktop - Current Protocol](screenshots/desktop-current-protocol.png)
+*Doctor reviewing current supplements with Action, Timing, and Priority controls*
+
+**New Items & Doctor Suggestions**
+![Desktop - New Items and Suggestions](screenshots/desktop-new-items-suggestions.png)
+*Evaluating new supplements and adding doctor's own recommendations*
+
+### Tablet Mode
+
+**Overview**
+![Tablet Mode](screenshots/tablet-overview.png)
+*Responsive layout optimized for tablet screens*
+
+### Generated Report
+
+**Summary Report**
+![Generated Report](screenshots/generated-report.png)
+*Final summary report ready for export or printing*
+
+</details>
+
 ## 📖 The Story
 
 I need to get feedback from my doctor on my "Supplements Protocol" so I can fix it if I'm doing something terribly wrong—or stop wasting money on the ones that don't help.
@@ -51,14 +72,9 @@ But the hard part wasn't the code. It was the "Big Picture." It's too easy to ge
 
 So I bullied Gemini until we had this: A local, offline, "quick and dirty" HTML file. No server. No cloud. No GSM signal needed in the doctor's bunker (office). Just big buttons and medical terms so he doesn't have to think much, just tap.
 
-**"Why don't you make this a SaaS/Startup?"** My wild guess for micro-projects like this:
-- 98% end up in the "forgotten side projects bin."
-- 1% buy a domain, try a few days to make a quick SaaS money machine, and forget about it when the next shiny thing appears.
-- 1% go full steam, raise a seed round, waste months of effort and hit a wall like "Medical Industry Certifications" nightmare.
-
 I spent a few years designing hardware for an innovative non-invasive glucose monitoring device. Solving the technical challenges was super fun! but then, I saw the face of Medical Device Regulations. For "Class II" devices, you need industry-specific Quality Management Systems, certified Technical Documentation… essential for safety, but a bureaucratic nightmare for an engineer who likes to move fast. The fun ends very soon. 😅
 
-So, because I want to avoid over-filling my "forgotten side-projects bucket," I'm sharing the project here. It might save you a few hours of prompt-engineering.
+So, because I want to avoid over-filling my "forgotten side-projects bucket," I'm sharing the project here. It might save you a few hours of prompt-engineering and trying to figure out how doctors operate.
 
 
 ## 🚀 Quick Start
@@ -163,8 +179,3 @@ Found a bug? Want to add a feature? Fork it, fix it, use it. This is open source
 ## ⚠️ Disclaimer
 
 This tool is for informational purposes only. It does not provide medical advice. Always consult with a qualified healthcare professional before making changes to your supplement protocol.
-
----
-
-**Built by:** Senior Hardware/Embedded Engineer (~20 years exp), Ex-MedTech (glucose monitoring), a few encounters with the "painful bureocracy" of Medical Device Regulations (MDR) / Certification process.  
-**Philosophy:** Solve the problem, ship the solution, move on.

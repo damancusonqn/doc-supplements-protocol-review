@@ -1,0 +1,12 @@
+# Screenshots Directory
+
+Place your screenshot images here:
+- `desktop-current-protocol.png` - Desktop mode showing Current Protocol section
+- `desktop-new-items-suggestions.png` - Desktop mode showing New Items and Doctor Suggestions
+- `tablet-overview.png` - Tablet mode overview
+- `generated-report.png` - Generated summary report
+
+Recommended specs:
+- Format: PNG or WebP
+- Width: 1200-1400px
+- File size: < 300KB each (compress if needed)
