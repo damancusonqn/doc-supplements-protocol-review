@@ -5,6 +5,7 @@ A single-file, offline HTML tool designed to optimize 5-10 minute doctor appoint
 ### Workflow
 
 ![Patient Protocol Flow](docs/workflow-diagram.jpg)
+
 ## 📑 Table of Contents
 
 - [🎯 What This Is](#-what-this-is)
@@ -164,12 +165,30 @@ Each supplement entry should follow this format:
 
 MIT License - See the license header in `supplements_review.html` or the `LICENSE` file.
 
+## 🛠️ Troubleshooting
+
+- **Browser shows raw HTML instead of running the app**  
+  - **Cause**: Opened the file from GitHub directly in the browser.  
+  - **Fix**: Right-click the [direct download link](https://raw.githubusercontent.com/damancusonqn/doc-supplements-protocol-review/main/supplements_review.html) → **“Save As…”** → save as `supplements_review.html`, then open that local file in your browser.
+
+- **Blank page or “Error: 'supplements_v14.js' not found.”**  
+  - **Cause**: Using an old version or a partially copied file.  
+  - **Fix**: Re-download the latest `supplements_review.html` and avoid editing anything below the `// --- END OF USER DATA SECTION ---` comment.
+
+- **Report is empty or missing items**  
+  - **Cause**: Doctor didn’t set an Action (Continue/Discontinue/Modify or YES/NO/Later) for those items.  
+  - **Fix**: Make sure each relevant supplement has a selected Action before clicking **“Generate Final Summary Report”**.
+
+- **Lost all doctor inputs after refresh/close**  
+  - **Cause**: This tool is intentionally stateless; data lives only in RAM.  
+  - **Fix**: Always **copy to clipboard or export to PDF** before closing the tab, navigating away, or refreshing.
+
 ## 🛠️ Technical Details
 
 - **Version**: 1.9
 - **Dependencies**: None (zero external libraries)
 - **Browser Support**: Any modern browser (Chrome, Firefox, Safari, Edge)
-- **File Size**: ~10KB (single HTML file)
+- **File Size**: ~20KB (single HTML file)
 - **Architecture**: Monolithic HTML with embedded JavaScript and CSS
 
 ## 🤝 Contributing
