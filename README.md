@@ -79,7 +79,7 @@ So, because I want to avoid over-filling my "forgotten side-projects bucket," I'
 
 ## 🚀 Quick Start
 
-1. **Download** `supplements_review.html`
+1. **Download** `supplements_review.html` (latest version from GitHub: [direct download link](https://raw.githubusercontent.com/damancusonqn/doc-supplements-protocol-review/main/supplements_review.html))
 2. **Open** it in any text editor (Notepad, VS Code, TextEdit, etc.)
 3. **Scroll** to the `// --- USER DATA SECTION (EDIT THIS) ---` comment block
 4. **Edit** your supplements list in the `MY_DATA` object
