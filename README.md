@@ -1,6 +1,6 @@
 # Doctor Visit Supplements Review Tool
 
-A single-file, offline HTML tool designed to optimize 5-10 minute doctor appointments. Hand your tablet to your doctor, review your supplement protocol, get "Green Light / Red Light" decisions, and generate a summary report—all without an internet connection.
+A single-file, offline HTML tool designed to optimize 5-10 minute doctor appointments. Hand your tablet to your doctor or just send him your version of the HTML (thanks @lucasrangit for the tip), review your supplement protocol, get "Green Light / Red Light" decisions, and generate a summary report—all without an internet connection.
 
 ### Workflow
 
