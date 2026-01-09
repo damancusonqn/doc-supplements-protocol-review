@@ -1,6 +1,6 @@
 # Doctor Visit Supplements Review Tool
 
-A single-file, offline HTML tool designed to optimize 5-10 minute doctor appointments. Hand your tablet to your doctor or just send him your version of the HTML (thanks @lucasrangit for the tip), review your supplement protocol, get "Green Light / Red Light" decisions, and generate a summary report—all without an internet connection.
+A single-file, offline HTML tool designed to optimize 5-10 minute doctor appointments. Hand your tablet to your doctor or just send him your version of the HTML (thanks [@lucasrangit](https://github.com/lucasrangit) for the tip), review your supplement protocol, get "Green Light / Red Light" decisions, and generate a summary report—all without an internet connection.
 
 ### Workflow
 
@@ -190,6 +190,10 @@ MIT License - See the license header in `supplements_review.html` or the `LICENS
 - **Browser Support**: Any modern browser (Chrome, Firefox, Safari, Edge)
 - **File Size**: ~20KB (single HTML file)
 - **Architecture**: Monolithic HTML with embedded JavaScript and CSS
+
+## Special Thanks
+-  [@lucasrangit](https://github.com/lucasrangit) - For the suggestion of trying by email if personally still doesn't help :)
+
 
 ## 🤝 Contributing
 
